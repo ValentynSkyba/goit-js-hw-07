@@ -1,3 +1,4 @@
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -27,3 +28,47 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+
+// Напиши скрипт для створення галереї зображень на основі масиву даних. HTML містить список ul.gallery.
+
+// <ul class="gallery"></ul>
+
+// Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
+
+// Ти можеш створити й додати HTML-елементи, використовуючи document.createElement() і elem.append() або шаблонні рядки і elem.insertAdjacentHTML().
+
+// Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
+// Додай мінімальне оформлення галереї флексбоксами через CSS класи.
+
+
+
+// const picCollection = document.querySelector(".js-pic-collection");
+
+// const liString = images.map(image => `<li><img src="${image.url}" alt="${image.alt}"></li>`).join('');
+// picCollection.insertAdjacentHTML('beforeend', liString);
+
+
+const picCollection = document.querySelector(".js-pic-collection");
+const myCollection = [];
+
+for (const obj of images) {
+  const myPic = document.createElement("li");
+  myPic.classList.add("img-info");
+
+const firstChild = document.createElement("img");
+firstChild.setAttribute("src", obj.url);
+firstChild.setAttribute("alt", obj.url);
+  firstChild.setAttribute("width", "360px");
+  firstChild.setAttribute("height", "300px");
+  // firstChild.setAttribute("object-fit", "cover"); не працює
+
+const galleryEl = document.querySelector(".js-gallery");
+ const myElems = [];
+
+  myPic.append(firstChild);
+
+  myCollection.push(myPic);
+}
+
+picCollection.append(...myCollection); 

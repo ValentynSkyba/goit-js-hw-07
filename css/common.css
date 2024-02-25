@@ -12,3 +12,274 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+/* Global styles */
+
+input {
+  padding: 8px;
+  font: inherit;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+a {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+ul#categories {
+  max-width: 440px;
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.96px;
+}
+
+ul#categories ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  border-radius: 8px;
+  background: #f6f6fe;
+}
+
+.item li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.64px;
+
+  border-radius: 4px;
+  border: 1px solid #808080;
+
+  width: 360px;
+
+  padding: 8px 16px 8px 16px;
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  width: 1158px;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 156px;
+}
+
+.gallery img {
+  width: 360px;
+  /* height: 300px;
+  object-fit: cover; */
+  /* Ми предали інформацію від властивостей width та height під час використання JS.*/
+}
+
+#name-input {
+  width: 360px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  color: #2e2f42;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 256px;
+}
+
+.login-form label {
+  flex-direction: column;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding-bottom: 8px;
+  gap: 8px;
+}
+
+.login-form input {
+  border: 1px solid #2e2f42;
+  border-radius: 5px;
+  width: 360px;
+  height: 40px;
+}
+
+.login-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-top: 8px;
+  transition: all ease-in-out 200ms;
+}
+
+.login-form button:hover {
+  background: #6c8cff;
+}
+
+.widget {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+  gap: 16px;
+}
+
+.widget p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.widget button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  background: #4e75ff;
+  transition: all ease-in-out 200ms;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.widget button:hover {
+  background: #6c8cff;
+}
+
+#controls {
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 104px;
+  background: #f6f6fe;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+#controls input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 10 px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+}
+
+#controls [data-create] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #4e75ff;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+#controls [data-destroy] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #ff4e4e;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+#boxes {
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 160px;
+  background: #f6f6fe;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
